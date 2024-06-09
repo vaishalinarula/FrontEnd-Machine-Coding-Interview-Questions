@@ -1,0 +1,30 @@
+.App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.user-block {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.user-block h2 {
+  margin: 0 0 10px 0;
+}
+
+.user-block ul {
+  list-style: none;
+  padding: 0;
+}
+
+.user-block li {
+  padding: 5px 0;
+}
+
+.user-block li.completed {
+  text-decoration: line-through;
+  color: #777;
+}
