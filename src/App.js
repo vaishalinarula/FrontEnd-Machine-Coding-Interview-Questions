@@ -58,7 +58,6 @@ import SearchBar from "./DebouncedSearchBar/SearchBar";
 function App() {
   return (
     <div className="App">
-      {/* <Test /> */}
       <SearchBar />
       <InputComponent />
       <ProgressBarApp />
