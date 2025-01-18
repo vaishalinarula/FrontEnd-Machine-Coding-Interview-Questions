@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "no-eval": "off",
+    "react-hooks/exhaustive-deps": "warn"
+  }
+}
