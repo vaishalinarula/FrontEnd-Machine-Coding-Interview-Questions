@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { fetchStudentsFromAPI1, fetchStudentsFromAPI2 } from "./api";
 import "./FetchAndMergeData";
 function FetchAndMergeData() {
+  
   const [students, setStudents] = useState([]);
 
   useEffect(() => {

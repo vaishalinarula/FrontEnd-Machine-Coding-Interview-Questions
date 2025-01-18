@@ -1,0 +1,10 @@
+.game-board{
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+.game-cell{
+  height: 50px;
+  width: 50px;
+  background-color: whitesmoke;
+  border: 1px solid gray;
+}

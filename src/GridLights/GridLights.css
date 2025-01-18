@@ -1,0 +1,15 @@
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.cell {
+  background-color: transparent;
+  border: 1px solid #000;
+  height: 0;
+  padding-bottom: 100%;
+}
+.cell-activated {
+  background-color: green;
+}

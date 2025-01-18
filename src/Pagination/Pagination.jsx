@@ -13,14 +13,24 @@ function Pagination() {
       try {
         setLoading(true);
         const response = await fetch(
-          `https://dummyjson.com/products?page=${currentPage}&limit=10`
+          `https://dummyjson.com/products?limit=100`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }
         const responseData = await response.json();
-        setProducts(responseData.products || []);
-        setTotalPages(Math.ceil(responseData.total / responseData.limit));
+
+        const totalItems = responseData.products.length;
+        const itemsPerPage = 10;
+        const totalPagesCalculated = Math.ceil(totalItems / itemsPerPage);
+        const startingIndex = (currentPage - 1) * itemsPerPage;
+        const paginatedProducts = responseData.products.slice(
+          startingIndex,
+          startingIndex + itemsPerPage
+        );
+
+        setProducts(paginatedProducts);
+        setTotalPages(totalPagesCalculated);
         setLoading(false);
         setError(null);
       } catch (error) {
@@ -56,7 +66,7 @@ function Pagination() {
               <li key={product.id}>{product.title}</li>
             ))}
           </ul>
-          <div className="pagination">
+          <div className="pagination" style={{ display: "flex", gap: "15px" }}>
             <button onClick={handlePreviousPage} disabled={currentPage === 1}>
               Previous
             </button>

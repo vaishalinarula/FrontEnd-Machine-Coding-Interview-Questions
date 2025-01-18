@@ -27,7 +27,13 @@ const Input = ({ type, maxLength, minValue, maxValue, ...props }) => {
 
   return (
     <div>
-      <input type={type} value={value} onChange={handleChange} {...props} />
+      <input
+        type={type}
+        value={value}
+        onChange={handleChange}
+        style={{ outline: error ? "1px solid red" : "1px solid black" }}
+        {...props}
+      />
       {error && <span style={{ color: "red" }}>{error}</span>}
     </div>
   );

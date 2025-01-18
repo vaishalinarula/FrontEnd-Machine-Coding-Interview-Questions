@@ -1,0 +1,61 @@
+.accordion {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.accordion-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.accordion-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.accordion-title input[type="checkbox"] {
+  /* margin-right: 10px; */
+  cursor: pointer;
+}
+
+.accordion-content {
+  padding: 10px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.toggle-icon {
+  margin-left: auto;
+  font-size: 18px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+button.enabled {
+  background-color: #28a745;
+  color: #fff;
+}
+
+/* button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+} */

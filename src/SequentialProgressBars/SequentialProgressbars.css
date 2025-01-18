@@ -1,0 +1,21 @@
+.progress-bars-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 80%;
+  margin: auto;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #e0e0df;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.filler {
+  height: 28px;
+  border-radius: 10px;
+  background-color: #4caf50;
+  transition: width 0.1s ease-in-out;
+}

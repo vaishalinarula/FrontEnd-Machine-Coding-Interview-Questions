@@ -8,6 +8,7 @@ const TodoList = () => {
   useEffect(() => {
     const fetchTodos = async () => {
       try {
+        setLoading(true);
         const response = await fetch(
           "https://dummyjson.com/todos?limit=10&skip=80"
         );
@@ -38,7 +39,7 @@ const TodoList = () => {
   }
 
   const groupedTodos = groupTodosByUser(todos);
-  console.log("groupedTodos", groupedTodos);
+  console.log("groupedTodos", groupedTodos, todos);
 
   return (
     <div className="App">
